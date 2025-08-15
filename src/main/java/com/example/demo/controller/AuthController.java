@@ -5,9 +5,6 @@ import com.example.demo.entity.UserEntity;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.security.JWTService;
 import com.example.demo.service.AuthService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,8 +22,6 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("api/auth")
-@SecurityRequirement(name = "Bearer Authentication")
-@Tag(name = "auth", description = "API pour gerer les utilisateurs")
 public class AuthController {
 
     @Autowired
@@ -41,7 +36,6 @@ public class AuthController {
         this.jwtService = jwtService;
     }
 
-    @Operation(summary = "Créer un compte")
     @PostMapping("/register")
     public ResponseEntity<Map<String, String>> register(@RequestBody UserEntity user) {
 
@@ -55,7 +49,6 @@ public class AuthController {
         }
     }
 
-    @Operation(summary = "se connecter")
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody Map<String, String> request) {
         String email = request.get("email");
@@ -72,7 +65,6 @@ public class AuthController {
         }
     }
 
-    @Operation(summary = "Récupérer les informations relative en base de donnée de l'utilisateur courant")
     @GetMapping("/me")
     public ResponseEntity<UserEntity> getAuthenticatedUser() {
         Object principal = SecurityContextHolder.getContext().getAuthentication();

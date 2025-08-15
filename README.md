@@ -4,7 +4,7 @@
 
 Ce projet est la création d'un backend Spring Boot pour une application frontend Angular définie dans le projet OpenClassrooms : [Modélisez et implémentez le back-end en utilisant du code Java maintenable](https://github.com/OpenClassrooms-Student-Center/Mod-lisez-et-impl-mentez-le-back-end-en-utilisant-du-code-Java-maintenable).
 
-Il s'agit d'une API REST pour gérer les locations immobilières avec authentification JWT, gestion des utilisateurs, messages et uploads de fichiers.
+Il s'agit d'une API REST minimale avec authentification JWT et gestion des utilisateurs uniquement.
 
 ## Technologies
 
@@ -12,7 +12,6 @@ Il s'agit d'une API REST pour gérer les locations immobilières avec authentifi
 - Spring Security avec JWT
 - MySQL
 - Spring Data JPA
-- Swagger/OpenAPI 3
 - Maven
 
 ## Installation
