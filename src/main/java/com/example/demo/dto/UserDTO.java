@@ -1,11 +1,11 @@
-package com.example.demo.entity;
+package com.example.demo.dto;
 
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
-public class DTOuser {
+public class UserDTO {
 
     private long id;
     private String name;

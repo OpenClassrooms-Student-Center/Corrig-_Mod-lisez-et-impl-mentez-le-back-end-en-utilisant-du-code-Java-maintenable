@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.TokenDTO;
+import com.example.demo.dto.TokenDTO;
 import com.example.demo.entity.UserEntity;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.security.JWTService;
